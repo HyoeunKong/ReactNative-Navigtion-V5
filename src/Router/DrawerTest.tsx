@@ -18,6 +18,7 @@ const DrawerTest = () => {
         <>
             <NavigationContainer>
                 <Drawer.Navigator
+                    drawerStyle={{ backgroundColor: 'transparent' }}
                     drawerContent={props => <DrawerContent {...props} />}>
                     <Drawer.Screen name="MainTab" component={StackTest} />
                 </Drawer.Navigator>
