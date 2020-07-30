@@ -1,7 +1,7 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 
 export const Container = styled.View`
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: #f7f9fb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
