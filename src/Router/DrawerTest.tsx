@@ -9,6 +9,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import MainTab from './MainTab';
+import RootStackScreen from './RootStackScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -16,10 +17,11 @@ const DrawerTest = () => {
     return (
         <>
             <NavigationContainer>
-                <Drawer.Navigator
+                <RootStackScreen />
+                {/* <Drawer.Navigator
                     drawerContent={props => <DrawerContent {...props} />}>
                     <Drawer.Screen name="MainTab" component={MainTab} />
-                </Drawer.Navigator>
+                </Drawer.Navigator> */}
             </NavigationContainer>
         </>
     );

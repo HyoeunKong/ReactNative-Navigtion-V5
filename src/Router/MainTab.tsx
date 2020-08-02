@@ -62,7 +62,7 @@ const DetailStackScreen = ({ navigation }) => {
                 name="Detail"
                 component={Detail}
                 options={{
-                    title: 'OverView',
+                    title: 'Detail',
                     headerLeft: () => (
                         <Icon.Button
                             name="ios-menu"
@@ -136,7 +136,7 @@ const MainTab = () => {
                     tabBarColor: '#009387',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons
-                            name="bell"
+                            name="bookmark"
                             color={color}
                             size={26}
                         />
@@ -166,7 +166,7 @@ const MainTab = () => {
                     tabBarColor: '#009387',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons
-                            name="account"
+                            name="bell"
                             color={color}
                             size={26}
                         />

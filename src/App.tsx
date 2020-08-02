@@ -12,10 +12,10 @@ import { StackTest, DrawerTest } from '@Router';
 import { SafeArea } from '@Styled';
 
 // Storybook server
+import { getApolloClient, TCacheShape } from '@Graphql';
 import StoryBookUIRoot from '../storybook';
 
 // Configure Apollo Client
-import { getApolloClient, TCacheShape } from '@Graphql';
 
 class App extends Component<{}, { client: any }> {
     constructor(props: any) {

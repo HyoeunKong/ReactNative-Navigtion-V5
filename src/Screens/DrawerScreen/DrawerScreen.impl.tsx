@@ -113,7 +113,7 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon
-                                    name="exit-to-app"
+                                    name="home-outline"
                                     color={color}
                                     size={size}
                                 />
@@ -126,7 +126,7 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon
-                                    name="exit-to-app"
+                                    name="bookmark-outline"
                                     color={color}
                                     size={size}
                                 />
@@ -139,7 +139,7 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon
-                                    name="exit-to-app"
+                                    name="account-outline"
                                     color={color}
                                     size={size}
                                 />
@@ -152,7 +152,7 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         <DrawerItem
                             icon={({ color, size }) => (
                                 <Icon
-                                    name="exit-to-app"
+                                    name="bell-outline"
                                     color={color}
                                     size={size}
                                 />
