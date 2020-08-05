@@ -18,6 +18,7 @@ import FontAweSome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { TouchableRipple } from 'react-native-paper';
+import { AuthContext } from '../../../components/context';
 import { ISignInScreen } from './SignInScreen.interface';
 import { Container, TopText, Middle, Centered } from './styled';
 
@@ -25,22 +26,25 @@ const SignInScreen: React.FunctionComponent<ISignInScreen.IProps> = props => {
     const { navigation } = props;
 
     const [data, setData] = React.useState({
-        email: '',
+        username: '',
         password: '',
         check_textInputChange: false,
         secureTextEntry: true,
     });
+
+    const { signIn } = React.useContext(AuthContext);
+
     const textInputChange = val => {
         if (val.length !== 0) {
             setData({
                 ...data,
-                email: val,
+                username: val,
                 check_textInputChange: true,
             });
         } else {
             setData({
                 ...data,
-                email: val,
+                username: val,
                 check_textInputChange: false,
             });
         }
@@ -58,6 +62,11 @@ const SignInScreen: React.FunctionComponent<ISignInScreen.IProps> = props => {
             ...data,
             secureTextEntry: !data.secureTextEntry,
         });
+    };
+
+    const loginHandle = (username: string, password: string) => {
+        console.log(username, password);
+        signIn(username, password);
     };
     return (
         <View style={styles.container}>
@@ -84,6 +93,9 @@ const SignInScreen: React.FunctionComponent<ISignInScreen.IProps> = props => {
                         </Animatable.View>
                     ) : null}
                 </View>
+                <Text style={styles.errorMsg}>
+                    Username must be 4 characters long.
+                </Text>
                 <Text style={[styles.text_footer, { marginTop: 35 }]}>
                     Password
                 </Text>
@@ -105,13 +117,19 @@ const SignInScreen: React.FunctionComponent<ISignInScreen.IProps> = props => {
                     </TouchableOpacity>
                 </View>
                 <View style={styles.button}>
-                    <LinearGradient
-                        colors={['#08d4c4', '#01ab9d']}
-                        style={styles.signIn}>
-                        <Text style={[styles.textSign, { color: '#fff' }]}>
-                            Sign In
-                        </Text>
-                    </LinearGradient>
+                    <TouchableOpacity
+                        style={styles.signIn}
+                        onPress={() => {
+                            loginHandle(data.username, data.password);
+                        }}>
+                        <LinearGradient
+                            colors={['#08d4c4', '#01ab9d']}
+                            style={styles.signIn}>
+                            <Text style={[styles.textSign, { color: '#fff' }]}>
+                                Sign In
+                            </Text>
+                        </LinearGradient>
+                    </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate('SignUpScreen')}
@@ -190,5 +208,10 @@ const styles = StyleSheet.create({
     textSign: {
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    errorMsg: {
+        fontSize: 12,
+        color: 'red',
+        marginTop: 3,
     },
 });

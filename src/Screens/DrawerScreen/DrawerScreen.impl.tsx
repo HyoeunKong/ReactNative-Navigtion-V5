@@ -16,6 +16,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { IDrawerScreen } from './DrawerScreen.interface';
 
+import { AuthContext } from '../../../components/context';
+
 const styles = StyleSheet.create({
     drawerContent: {
         flex: 1,
@@ -65,9 +67,12 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
     const { navigation } = props;
     const [isDarkTheme, setIsDarkTheme] = React.useState(false);
 
+    const { signOut } = React.useContext(AuthContext);
+
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
     };
+
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props}>
@@ -184,7 +189,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         <Icon name="exit-to-app" color={color} size={size} />
                     )}
                     label="Sign out"
-                    onPress={() => {}}
+                    onPress={() => {
+                        signOut();
+                    }}
                 />
             </Drawer.Section>
         </View>
