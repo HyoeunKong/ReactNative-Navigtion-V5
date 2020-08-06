@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Text should match snapshot 1`] = `
+<Styled(Text)
+  lineHeight="20px"
+  size="17px"
+>
+  블록체인기반 최초 기부 혁신을 희망하다
+</Styled(Text)>
+`;
