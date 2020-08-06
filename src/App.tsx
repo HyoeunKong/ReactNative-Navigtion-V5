@@ -7,15 +7,15 @@ import BootSplash from 'react-native-bootsplash';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { theme } from '@Definitions/Styled';
 import { IS_STORYBOOK } from 'react-native-dotenv';
-import { StackTest, DrawerTest } from '@Router';
+import RootRouter from '@Router';
 
 import { SafeArea } from '@Styled';
 
 // Storybook server
+import { getApolloClient, TCacheShape } from '@Graphql';
 import StoryBookUIRoot from '../storybook';
 
 // Configure Apollo Client
-import { getApolloClient, TCacheShape } from '@Graphql';
 
 class App extends Component<{}, { client: any }> {
     constructor(props: any) {
@@ -39,7 +39,7 @@ class App extends Component<{}, { client: any }> {
             // <ApolloProvider client={client}>
             <ThemeProvider theme={theme}>
                 <SafeArea>
-                    <DrawerTest />
+                    <RootRouter />
                 </SafeArea>
             </ThemeProvider>
             // </ApolloProvider>
