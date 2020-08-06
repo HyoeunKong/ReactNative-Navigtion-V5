@@ -1,4 +1,3 @@
-import StackTest from './StackTest';
-import DrawerTest from './DrawerTest';
+import RootRouter from './RootRouter';
 
-export { StackTest, DrawerTest };
+export default RootRouter;

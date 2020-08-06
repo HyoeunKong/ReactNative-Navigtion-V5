@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import {
     Avatar,
     Title,
@@ -213,15 +213,19 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
 
                 <View
                     style={{
-                        height: 60,
+                        height: 50,
                         borderBottomColor: '#fff',
                         borderBottomWidth: 0.5,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingLeft: 20,
+                        paddingHorizontal: 20,
+                        justifyContent: 'center',
                     }}>
-                    <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <TouchableOpacity
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                        }}>
                         <Text
                             style={{
                                 fontSize: 15,
@@ -230,19 +234,27 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                             }}>
                             Gold Train
                         </Text>
+                        <Image
+                            style={{ width: 15, height: 15 }}
+                            source={require('../../Assets/images/Common/arrow.png')}
+                        />
                     </TouchableOpacity>
                 </View>
                 <View
                     style={{
-                        height: 60,
+                        height: 50,
                         borderBottomColor: '#fff',
                         borderBottomWidth: 0.5,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingLeft: 20,
+                        paddingHorizontal: 20,
+                        justifyContent: 'center',
                     }}>
-                    <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <TouchableOpacity
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                        }}>
                         <Text
                             style={{
                                 fontSize: 15,
@@ -251,19 +263,27 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                             }}>
                             My 계보도
                         </Text>
+                        <Image
+                            style={{ width: 15, height: 15 }}
+                            source={require('../../Assets/images/Common/arrow.png')}
+                        />
                     </TouchableOpacity>
                 </View>
                 <View
                     style={{
-                        height: 60,
+                        height: 50,
                         borderBottomColor: '#fff',
                         borderBottomWidth: 0.5,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingLeft: 20,
+                        paddingHorizontal: 20,
+                        justifyContent: 'center',
                     }}>
-                    <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <TouchableOpacity
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                        }}>
                         <Text
                             style={{
                                 fontSize: 15,
@@ -272,19 +292,27 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                             }}>
                             My 페이지
                         </Text>
+                        <Image
+                            style={{ width: 15, height: 15 }}
+                            source={require('../../Assets/images/Common/arrow.png')}
+                        />
                     </TouchableOpacity>
                 </View>
                 <View
                     style={{
-                        height: 60,
+                        height: 50,
                         borderBottomColor: '#fff',
                         borderBottomWidth: 0.5,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingLeft: 20,
+                        paddingHorizontal: 20,
+                        justifyContent: 'center',
                     }}>
-                    <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <TouchableOpacity
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                        }}>
                         <Text
                             style={{
                                 fontSize: 15,
@@ -293,19 +321,27 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                             }}>
                             공지사항
                         </Text>
+                        <Image
+                            style={{ width: 15, height: 15 }}
+                            source={require('../../Assets/images/Common/arrow.png')}
+                        />
                     </TouchableOpacity>
                 </View>
                 <View
                     style={{
-                        height: 60,
+                        height: 50,
                         borderBottomColor: '#fff',
                         borderBottomWidth: 0.5,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        paddingLeft: 20,
+                        paddingHorizontal: 20,
+                        justifyContent: 'center',
                     }}>
-                    <TouchableOpacity style={{ alignItems: 'center' }}>
+                    <TouchableOpacity
+                        style={{
+                            height: 50,
+                            alignItems: 'center',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                        }}>
                         <Text
                             style={{
                                 fontSize: 15,
@@ -314,6 +350,10 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                             }}>
                             고객센터
                         </Text>
+                        <Image
+                            style={{ width: 15, height: 15 }}
+                            source={require('../../Assets/images/Common/arrow.png')}
+                        />
                     </TouchableOpacity>
                 </View>
             </View>
