@@ -220,6 +220,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         justifyContent: 'center',
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('GoldTrain');
+                        }}
                         style={{
                             height: 50,
                             alignItems: 'center',
@@ -249,6 +252,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         justifyContent: 'center',
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('MyOrg');
+                        }}
                         style={{
                             height: 50,
                             alignItems: 'center',
@@ -278,6 +284,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         justifyContent: 'center',
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('MyPage');
+                        }}
                         style={{
                             height: 50,
                             alignItems: 'center',
@@ -307,6 +316,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         justifyContent: 'center',
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('Notice');
+                        }}
                         style={{
                             height: 50,
                             alignItems: 'center',
@@ -336,6 +348,9 @@ const DrawerScreen: React.FunctionComponent<IDrawerScreen.IProps> = props => {
                         justifyContent: 'center',
                     }}>
                     <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('CS');
+                        }}
                         style={{
                             height: 50,
                             alignItems: 'center',
